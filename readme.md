@@ -31,13 +31,19 @@
 - 由于播放的实现方式特殊，暂支持Windows
 
 ### 软件要求
-- [Python](https://www.python.org/downloads/)：推荐`3.8.x`及以上
-- NeteaseCloudMusicAPI:
+- [Python](https://www.python.org/downloads/)
+    - 推荐`3.8.x`及以上
+    - 在安装前请选择底部`Add Python.exe to PATH`添加到系统环境变量
+- [NeteaseCloudMusicAPI](https://github.com/IamFurina/NeteaseCloudMusicAPI):
     - 安装[Node.JS](https://nodejs.org/zh-cn)
-    - 克隆仓库【[点击前往](https://github.com/IamFurina/NeteaseCloudMusicAPI)】并安装运行
+    - 克隆仓库并安装运行
     - 可部署到本地或者公网服务器
     - 修改`api.py`中第六行`self.base_url`为API运行地址
-- [VLC Media Player](https://www.videolan.org/): 通过调用VLC播放音乐
+    - 若要集成[NeteaseCloudMusic_PythonSDK](https://github.com/2061360308/NeteaseCloudMusic_PythonSDK)还需我研究一手
+- [VLC Media Player](https://www.videolan.org/)
+    - 通过调用VLC后台进程播放音乐 ← 特殊之处
+    - 安装后请将安装路径`C:\Program Files\VideoLAN\VLC(默认)`添加到系统环境变量`Path`
+    - 为什么？因为尝试`pygame`/`python-vlc`直接播放总是不尽人意，只好另辟蹊径
 
 ### 项目依赖
 - 查看`requirement.txt`，就不说明了
@@ -57,7 +63,7 @@ python login.py
 
 ## 反馈建议
 
-- 第一版功能和页面还有一些东西的实现方式过于粗糙。
-- 欢迎各位提交 Issues 和 PR，提供更多建议。
-- 非常欢迎大家参与进来，共同维护。
+- 第一版功能和页面还有一些东西的实现方式过于粗糙
+- 欢迎各位提交 Issues 和 PR，提供更多建议
+- 非常欢迎大家参与进来，共同维护
     - 还是ELECTRON好用（x）
